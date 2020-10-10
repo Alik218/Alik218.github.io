@@ -1,24 +1,9 @@
-div {
-    height: 20px;
-    width: 200px;
-    margin-bottom: 5px;
-    margin-left: 20px;
-}
-.chess {
-	display: table;
-}
-.chess-tr {
-    display: table-row;
-    
-}
-.chess-tr div {
-    display: table-cell;
-    
-}		
- 
-.chess .chess-tr:nth-child(odd) div:nth-child(odd) {
-	background: rgb(0, 0, 0);
-}	
-.chess .chess-tr:nth-child(even) div:nth-child(even) {
-    background: rgb(0, 0, 0);
+div {  
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    background-image: linear-gradient( 45deg,black 25%, transparent 25%, transparent 74%, black 75%, black), 
+        linear-gradient( 45deg,black 25%, transparent 25%, transparent 74%, black 75%, black);
+    background-size:100px 100px;
+    background-position: 0 0, 50px 50px;
 }
