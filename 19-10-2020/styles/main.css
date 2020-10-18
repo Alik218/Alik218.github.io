@@ -155,110 +155,63 @@ form {
     position: absolute;
 }
 
-}
 
-.clock {
+.timer {
     position: relative;
-    
-}
-
-.clock > div {
-    position: absolute;
     top: 52px;
-    left: 471px;
-    height: 71px;
-    width: 71px;
-    z-index: 2;
+    width: 186px;
     margin: 0 auto;
-    border: none;
-    background: #b9d6ef;
+    z-index: 2;
+}
+.tmr1, .tmr2, .tmr3 {
+    position: absolute;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
+    background-color: rgb(185, 214, 239);
 }
-
+.tmr1 {
+    left: -146px;
+}
+.tmr2 {
+    left: -33px;
+}
+.tmr3 {
+    left: 76px;
+}
+.days,  .hours, .mins{
+    position: absolute;
+    font-size: 24px;
+    color: rgb(38, 107, 151);
+    line-height: 0.667;
+}
 .days {
-    left: -353px;
-    
+    top: 28px;
+    left: 13px;
 }
-
 .hours {
-    right: 655px;
+    top: 28px;
+    left: 21px;
 }
-
 .mins {
-    right: 435px;
+    top: 28px;
+    left: 20px;
 }
-
-.days1, .hours1, .mins1{
-    position: relative;
-    color:#266b97;
-    top: 22px;
-    left: 18px;
-    font-size: 25px;
-}
-
-.dhm {
-    position: relative;
-    top: 128px;
-    height: 50px;
-    width: 400px;
-    color:  #b9d6ef;
-    font-size: 22px;
-    margin: 0 auto;
-    z-index: 2;
-}
-
-}
-
-.dhm < div {
+.dhm1, .dhm2, .dhm3 {
     position: absolute;
+    font-size: 24px;
+    color: rgb(243, 243, 243);
+    line-height: 0.667;
 }
-
 .dhm1 {
-    position: absolute;
-    left: -37px;
+    top: 81px;
+    left: 4px;
 }
-
 .dhm2 {
-    position: absolute;
-    left: 64px;
+    top: 81px;
+    left: -8px;
 }
-
 .dhm3 {
-    position: absolute;
-    left: 190px;
-}
-
-.slideRight{
-    animation-name: slideRight;
-    -webkit-animation-name: slideRight;    
- 
-    animation-duration: 2.5s;   
-    -webkit-animation-duration: 2.5s;
- 
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-}
- 
-@keyframes slideRight {
-    0% {
-        transform: rotate(-4deg);   
-    }
-    50% {
-        transform: rotate(4deg);
-    }
-    100% {
-        transform: rotate(-4deg);   
-    }                       
-}
- 
-@-webkit-keyframes slideRight {
-    0% {
-        -webkit-transform: rotate(-4deg);   
-    }
-    50% {
-        -webkit-transform: rotate(4deg);
-    }
-    100% {
-        -webkit-transform: rotate(-4deg);   
-    }               
+    top: 81px;
+    left: 5px;
 }
