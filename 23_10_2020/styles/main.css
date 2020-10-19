@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,700;0,800;0,900;1,300;1,400;1,700;1,800;1,900&display=swap');
+
+.main {
+    background-color: #b9d6ef;
+    height: 1000px;
+    font-family: Nunito Sans; 
+}
+
+div {
+   
+}
+
+.clouds {
+    position: relative;
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.clouds > div {
+    position: absolute;
+}
+
+.cloud1 {
+    left: -353px;
+}
+
+.cloud2 {
+    right: -204px;
+}
+
+.comingsoon {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    height: 70px;
+    left: 4px;
+    letter-spacing: -6px;
+    font-size: 72px;
+    color: #fefefe;
+    line-height: 1.12;
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.17); 
+    font-weight: 800;  
+}
+
+.comingsoon > div {
+    position: absolute;
+}
+
+.subscribe {
+    height: 46px;
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    font-size: 0.9rem;
+    line-height: 42px;
+    left: -40px;
+    color: rgb(38, 107, 151);
+    font-size: 14px;
+
+}
+
+.subscribe > div {
+    position: absolute;
+}
+
+
+form {
+    position: relative;
+    height: 60px;
+    width: 300px;
+    margin: 0 auto;
+    left: -118px;
+  }
+
+
+.d1 input {
+    width: 230px;
+    height: 36px;
+    padding-left: 10px;
+    border: 0px solid white;
+    background-color: white;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004),inset 0px 2px 5px 0px rgba(29, 26, 22, 0.2);
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: "Arial";
+    color: rgb(128, 128, 128);
+    line-height: 2.083;
+}
+
+.d1 button {
+    position: absolute;
+    top: 2px;
+    right: -44px;
+    width: 90px;
+    height: 36px;
+    border: 1px solid #f8a426;
+    background: linear-gradient(#fbc742, #f8a426);
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    text-shadow: 0px 1px 1px rgba(29, 26, 22, 0.2);
+}
+
+.shape {
+    position: relative;
+    width: 515px;
+    margin: 0 auto;
+    height: 178px;
+    z-index: 1;
+
+}
+
+.shape > div {
+    position: absolute;
+}
+
+.ship {
+    position: relative;
+    width: 566px;
+    margin: 0 auto;
+    height: 11px;
+    z-index: 2;
+}
+
+.ship > div {
+    position: absolute;
+}
+
+.rect1 {
+    position: relative;
+    background-color: white;
+    height: 4px;
+    opacity: 20%;
+
+}
+
+.rect1 < div {
+    position: absolute;
+}
+
+.rect2 {
+    position: relative;
+    background-color: #336699 ;
+    height: 9px;
+    opacity: 70%;
+}
+
+.rect2 < div {
+    position: absolute;
+}
+
+.sea {
+    position: relative;
+    background-color: #266b97;
+    height: 600px;
+}
+
+.sea < div {
+    position: absolute;
+}
+
+
+.timer {
+    position: relative;
+    top: 52px;
+    width: 186px;
+    margin: 0 auto;
+    z-index: 2;
+}
+.tmr1, .tmr2, .tmr3 {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: rgb(185, 214, 239);
+}
+.tmr1 {
+    left: -146px;
+}
+.tmr2 {
+    left: -33px;
+}
+.tmr3 {
+    left: 76px;
+}
+.days,  .hours, .mins{
+    position: absolute;
+    font-size: 24px;
+    color: rgb(38, 107, 151);
+    line-height: 0.667;
+}
+.days {
+    top: 28px;
+    left: 13px;
+}
+.hours {
+    top: 28px;
+    left: 21px;
+}
+.mins {
+    top: 28px;
+    left: 20px;
+}
+.dhm1, .dhm2, .dhm3 {
+    position: absolute;
+    font-size: 24px;
+    color: rgb(243, 243, 243);
+    line-height: 0.667;
+}
+.dhm1 {
+    top: 81px;
+    left: 4px;
+}
+.dhm2 {
+    top: 81px;
+    left: -8px;
+}
+.dhm3 {
+    top: 81px;
+    left: 5px;
+}
