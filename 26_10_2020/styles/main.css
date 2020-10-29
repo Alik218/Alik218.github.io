@@ -356,7 +356,6 @@
 
 .photo1 {
     display: flex;
-    align-items: center;
     width: 673px;
     height: 454px;
 }
@@ -409,15 +408,15 @@
 }
 
 .kl {
-    margin: 28px 0px;
+    margin: 30px 0px;
 }
 
 .addres {
-    margin: -4px 0px;
+    margin: -6px 0px;
 }
 
 .categ {
-    margin: 27px 0px;
+    margin: 30px 0px;
 }
 
 .kl1, .addres1, .categ1 {
@@ -433,6 +432,8 @@
 }
 
 .text {
+    display: flex;
+    flex-direction: column;
     width: 673px;
     height: 400px;
 }
@@ -440,24 +441,97 @@
 .lorem {
     display: flex;
     justify-content: space-between;
-    width: 778px;
-    height: 400px;
+    width: 676px;
+    height: 0px;
+    border: 1px solid #E8E8EE; 
+    margin: -5px 30px;
+    border-top: 0px;
 }
 
 .des {
-    margin: 22px 37px;
+    margin: 29px 6px;
     height: 180px;
+    font-family: Google Sans;
+    font-size: 18px;
+    color: #828282;
+    
+}
+
+.des1 {
+    height: 197px;
+    width: 498px;
+    margin: 23px 0px 23px 1px;
+    font-family: Google Sans;
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.8;
+}
+
+.os {
+    display: flex;
+    justify-content: space-between;
+    width: 676px;
+    height: 0px;
+    border: 1px solid #E8E8EE; 
+    border-top: 0px;
+    margin: 210px 30px;
+}
+
+.mod1, .mod2, .mod3  {
+    margin: 29px 6px;
+    height: 18px;
+    width: 158px;
     font-family: Google Sans;
     font-size: 18px;
     color: #828282;
 }
 
-.des1 {
-    height: 180px;
-    width: 524px;
-    margin: 16px 50px;
+.mod2 {
+    height: 36px;
+}
+
+.apple {
+    width: 497px;;
+}
+
+.apple1, .apple2, .apple3 {
+    margin: 22px -1px;
+    height: 26px;
     font-family: Google Sans;
     font-size: 18px;
     color: #333333;
     line-height: 1.8;
+}
+.apple2 {
+    height: 44px;
+}
+
+.footer {
+    margin: 0 auto;
+    width: 2000px;
+}
+
+.footer1 {
+    margin: 75px 406px;
+    width: 1155px;
+    height: 444px;
+}
+
+.ads {
+    margin: -46px 0px;
+    height: 100px;
+    font-family: Google Sans;
+    font-size: 25px;
+    color: #333333;
+
+
+}
+
+.asd2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.asd1 {
+    width: 286px;
 }
