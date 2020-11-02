@@ -28,6 +28,5 @@ body {
     border: 4px solid blue;
     border-radius: 8px;
     margin: 98px 98px;
-    background-image: url(../images/ship.png);
     transform: rotate(180deg);
 }
