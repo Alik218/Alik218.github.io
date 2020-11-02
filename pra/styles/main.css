@@ -1,102 +1,33 @@
-.main {
-    display: flex;
-    flex-direction: column;
+body {
     margin: 0 auto;
-    height: 550px;
-    width: 550px;
-    border-radius: 0px;
-    background: burlywood;
-}    
-
-.a1 {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 50px;
-    height: 200px;
-    width: 450px;
+    width: 100px;
+    background-color: darkgrey;
 }
 
-.a11 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    width: 50px;
-    background: cornflowerblue;
-    color: cornsilk;
-    border-radius: 5px;
-    
-}
-
-.a12 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    width: 50px;
-    background: cornflowerblue;
-    color: cornsilk;
-    border-radius: 5px;
-}
-
-.a13 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 50px;
-    background: cornflowerblue;
-    color: cornsilk;
-    border-radius: 5px;
-}
-
-
-.b2 {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 50px;
-    height: 100px;
-    width: 450px;
-}
-
-.b21 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+.main {
+    position: relative;
+    margin: 0 auto;
     width: 300px;
-    background: cornflowerblue;
-    color: cornsilk;
-    border-radius: 5px;
+    height: 300px;
+    background-color: darkkhaki;
 }
 
-.b22 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-    background: cornflowerblue;
-    color: cornsilk;
-    border-radius: 5px;
+.rt {
+    position: absolute;
+    margin: 100px 100px;
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    transition: border 1s ease 0.5s,
+                border-radius 4s ease 0.5s,
+                transform 7s ease 0.5s;
 }
 
-
-.c3 {
-    display: flex;
-    justify-content:center ;
-    margin: 25px 50px;
-    height: 200px;
-    width: 450px;
-}
-
-.c31 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    width: 50px;
-    background: cornflowerblue;
-    color: cornsilk;
-    border-radius: 5px;
+.rt:hover {
+    background-color: cornsilk;
+    border: 4px solid blue;
+    border-radius: 8px;
+    margin: 98px 98px;
+    background-image: url(/images/ship.png);
+    transform: rotate(180deg);
 }
