@@ -20,8 +20,9 @@ body {
     background-color: coral;
     transition: border 2s ease 4s,
                 border-radius 4s ease 0s,
-                transform 7s ease 6s;
+                transform 4s ease 6s;
 }
+
 
 .rt:hover {
     background-color: cornsilk;
@@ -29,4 +30,8 @@ body {
     border-radius: 8px;
     margin: 98px 98px;
     transform: rotate(180deg);
+}
+
+.img {
+    margin: 30px 30px;
 }
