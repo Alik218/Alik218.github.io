@@ -1,0 +1,141 @@
+.main {
+    height: 98vh;
+    border: 5px solid black;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 200px 4fr 4fr ;
+    grid-template-rows: 50px 27fr 15fr 2fr 16fr 50px ;
+    gap: 4px;
+    grid-template-areas: 
+        "lg lg lg"
+        "as ar ar"
+        "as fl fl"
+        "ln ln ln"
+        "lm lm lm"
+        "hl hl hl";
+}
+
+@media screen and (max-width: 640px) {
+    .main {
+        display: grid;
+        grid-template-columns: 200px 4fr 4fr ;
+        grid-template-rows: 50px 27fr 15fr 18fr 50px ;
+        gap: 4px;
+        grid-template-areas:
+            "lg lg lg"
+            "as ar ar"
+            "as fl fl"
+            "lm lm lm"
+            "hl hl hl";
+        .line {
+            display: none;
+        }
+    }
+}
+
+.main div {
+    background-color: burlywood;
+}
+
+.logo {
+    grid-area: lg;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    div {
+        display: flex;
+        align-items: center;
+        min-width: 300px;
+        flex-grow: 1;
+        border: 2px solid black;
+    }
+}
+
+.aside {
+    grid-area: as;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid blue;
+        height: 160px;
+        width: 60px;
+        margin: 1px 10px;
+    }
+    :nth-child(2n) {
+        margin-top: 50px;
+    }
+}
+
+.article {
+    grid-area: ar;
+
+
+    .img1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px;
+        border: 4px solid blue;
+        height: 100px;
+        width: 60%;
+        .lor2 {
+            background-image: url(../img/1.png) ;
+            background-size: 80px 80px;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+        }
+    }
+    .img2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px;
+        border: 4px solid blue;
+        height: 100px;
+        width: 60%;
+        .lore2 {
+            background-image: url(../img/1.png) ;
+            background-size: 80px 80px;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+.flowers {
+    grid-area: fl;
+    background-image: url(../img/cvety-900x500.jpg);
+    
+}
+
+.line {
+    grid-area: ln;
+}
+
+.lorem {
+    grid-area: lm;
+    overflow-y: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    div {
+        margin: 5px;
+        height: 150px;
+        width: 688px;
+        border: 4px solid blue;
+    }
+}
+
+.hills {
+    grid-area: hl;
+    background-image: url(../img/111.jpg);
+}
