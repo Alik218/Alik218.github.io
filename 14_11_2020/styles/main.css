@@ -1,0 +1,206 @@
+.main {
+  height: 98vh;
+  border: 5px solid black;
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 4fr 4fr;
+      grid-template-columns: 200px 4fr 4fr;
+  -ms-grid-rows: 50px 27fr 15fr 2fr 16fr 50px;
+      grid-template-rows: 50px 27fr 15fr 2fr 16fr 50px;
+  gap: 4px;
+      grid-template-areas: "ab ab lg" "as ar ar" "as fl fl" "ln ln ln" "lm lm lm" "hl hl hl";
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px 4fr 4fr;
+        grid-template-columns: 200px 4fr 4fr;
+    -ms-grid-rows: 25px 25px 27fr 15fr 18fr 50px;
+        grid-template-rows: 25px 25px 27fr 15fr 18fr 50px;
+    gap: 4px;
+        grid-template-areas: "ab ab ab" "lg lg lg" "as ar ar" "as fl fl" "lm lm lm" "hl hl hl";
+  }
+  .main .line {
+    display: none;
+  }
+}
+
+.main div {
+  background-color: burlywood;
+}
+
+.log {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: lg;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.log div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.ab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: ab;
+}
+
+.aside {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: as;
+  overflow-y: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.aside div {
+  overflow-y: scroll;
+  border: 4px solid blue;
+  height: 160px;
+  width: 60px;
+  margin: 1px 10px;
+}
+
+.aside :nth-child(2n) {
+  margin-top: 50px;
+}
+
+.article {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: ar;
+}
+
+.article .img1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px;
+  border: 4px solid blue;
+  height: 100px;
+  width: 60%;
+}
+
+.article .img1 .lor1 {
+  margin: 5px;
+  overflow-y: scroll;
+  width: 80%;
+}
+
+.article .img1 .lor2 {
+  background-image: url(../img/1.png);
+  background-size: 80px 80px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.article .img2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px;
+  border: 4px solid blue;
+  height: 100px;
+  width: 60%;
+}
+
+.article .img2 .lore1 {
+  margin: 5px;
+  overflow-y: scroll;
+  width: 80%;
+}
+
+.article .img2 .lore2 {
+  background-image: url(../img/1.png);
+  background-size: 80px 80px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.flowers {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: fl;
+  background-image: url(../img/cvety-900x500.jpg);
+}
+
+.line {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: ln;
+}
+
+.lorem {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: lm;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.lorem div {
+  margin: 5px;
+  height: 150px;
+  width: 688px;
+  border: 4px solid blue;
+}
+
+.hills {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: hl;
+  background-image: url(../img/111.jpg);
+}
+/*# sourceMappingURL=main.css.map */
