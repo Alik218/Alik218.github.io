@@ -22,8 +22,8 @@
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 40px 84px 330px 100%;
-        grid-template-rows: 40px 84px 330px 100%;
+    -ms-grid-rows: 40px 84px 350px 100%;
+        grid-template-rows: 40px 84px 350px 100%;
     gap: 4px;
         grid-template-areas: "hd hd hd" "sp sp sp" "sm sm sm" "ft ft ft";
   }
@@ -48,7 +48,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  width: 70%;
+  width: 75%;
   border-radius: 0px;
   background: #F2F2F2;
 }
@@ -77,7 +77,7 @@
   -ms-grid-column-span: 3;
   grid-area: sp;
   margin: 0 auto;
-  width: 70%;
+  width: 75%;
   left: -3px;
   background: #FFFFFF;
   border: 1px solid #E8E8EE;
@@ -97,7 +97,7 @@
 }
 
 .sigmapool .search {
-  width: 50%;
+  width: 60%;
   background: #FCFCFC;
   border: 1px solid #E8E8EE;
   -webkit-box-sizing: border-box;
@@ -126,7 +126,7 @@
   width: 424px;
   height: 18px;
   font-family: Google Sans;
-  font-size: 14px;
+  font-size: 1vw;
   color: #828282;
 }
 
@@ -139,7 +139,7 @@
   width: 97px;
   height: 18px;
   font-family: Google Sans;
-  font-size: 14px;
+  font-size: 1vw;
   color: #828282;
 }
 
@@ -179,7 +179,7 @@
   -ms-grid-column-span: 3;
   grid-area: sm;
   margin: 0 auto;
-  width: 78%;
+  width: 80%;
   border-radius: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -203,34 +203,12 @@
 }
 
 .smart .cell {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  width: 357.88px;
-  height: 169px;
+  margin: 5px 0;
   background: -webkit-gradient(linear, left top, right top, from(#FF9191), color-stop(100.03%, #FF7878));
   background: linear-gradient(90deg, #FF9191 0%, #FF7878 100.03%);
   border-radius: 5px;
-}
-
-.smart .cell1 {
-  width: 50px;
-  margin: 104px 21px;
-  font-family: Google Sans;
-  font-size: 21px;
-  color: #FFFFFF;
-}
-
-.smart .cell2 {
-  width: 127px;
-  margin: 134px -148px;
-  font-family: Google Sans;
-  font-size: 14px;
-  color: #FFFFFF;
+  width: 357.88px;
+  height: 169px;
 }
 
 .smart .car {
@@ -246,23 +224,6 @@
   background: -webkit-gradient(linear, left top, right top, from(#56CCF2), color-stop(98%, #59e6ff));
   background: linear-gradient(90deg, #56CCF2 0%, #59e6ff 98%);
   border-radius: 5px;
-}
-
-.smart .car1 {
-  width: 50px;
-  margin: 105px 113px;
-  font-family: Google Sans;
-  font-size: 21px;
-  color: #FFFFFF;
-}
-
-.smart .car2 {
-  font-family: Google Sans;
-  font-size: 14px;
-  line-height: 16px;
-  color: #FFFFFF;
-  width: 127px;
-  margin: 134px -240px;
 }
 
 .smart .arr1 {
@@ -291,7 +252,7 @@
           transform: rotate(180deg);
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1000px) {
   .smart {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -316,7 +277,7 @@
   -ms-grid-column-span: 3;
   grid-area: ft;
   margin: 50px auto;
-  width: 70%;
+  width: 76%;
 }
 
 .footer .ads {
@@ -333,10 +294,12 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .footer .asd1 {
-  width: 286px;
-  margin: 14px 13px;
+  width: 268px;
+  margin: 10px -2px 10px 5px;
 }
 /*# sourceMappingURL=main.css.map */
