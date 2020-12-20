@@ -22,12 +22,3 @@ btnLeftEl.addEventListener('click' , () => {
     state=!state;
 })
 
-btnLeftEl.addEventListener('click' , () => {
-    if (trainEl.classList.contains('train')){
-    trainEl.classList.remove('train')
-    trainEl.classList.add('train_left')}
-    else {
-    trainLeftEl.style.animationPlayState=state?'paused':'running';
-    state=!state;
-    }
-})
