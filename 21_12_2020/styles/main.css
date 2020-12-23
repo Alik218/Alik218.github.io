@@ -1,17 +1,32 @@
+/* dz21_12_2020 */
+
 body {
   background-color: #7bb9f0;
 }
 
-
-/*TRAIN*/
 
 .train {
   position: absolute;
   bottom: 10px;
   width: 310px;
   z-index: 1;
-  animation: voyage 10s linear infinite;
 }
+
+.train2 {
+  position: absolute;
+  bottom: 10px;
+  width: 310px;
+  z-index: 1;
+}
+
+.train_right {
+  animation: voyage 5s linear forwards;
+}
+
+.train_left {
+  animation: voyage2 5s linear forwards;
+}
+
 
 .wagon,
 .cabin,
@@ -43,8 +58,6 @@ body {
   border-top: 3px solid #205c6b;
   border-bottom: 3px dashed #205c6b;
 }
-
-/*WHEELS*/
 
 .wagon:before,
 .wagon:after,
@@ -84,7 +97,6 @@ body {
 }
 
 
-/*LOCOMOTIVE*/
 
 .locomotive {
   background-color: transparent;
@@ -99,8 +111,6 @@ body {
   border-radius: 8px 8px 0 0;
 }
 
-
-/*locomotive window*/
 
 .locomotive .cabin:before {
   content: ' ';
@@ -152,28 +162,31 @@ body {
 }
 
 
-/*ANIMATIONS*/
-
 @keyframes voyage {
   0% {
-    left: 0%;
+    left: 0px;
+  }
+  1% {
+
   }
   100% {
-    left: 100%;
+    left: 1000px;
   }
 }
 
 @keyframes voyage2 {
   0% {
-    right: 0%;
+  }  
+
+  99% {
+    left: 1px;
   }
   100% {
-    right: 100%;
+    left: 0px;
   }
 }
 
 
-/* bottom */
 .button {
   display: flex;
   justify-content: space-around;
