@@ -1,54 +1,81 @@
-// dz21_12_2020
-
 const btnLightEl = document.querySelector('.light2')
 const lightEl = document.querySelector('.light_on')
-const btnRightEl = document.querySelector('.right')
-const btnLeftEl = document.querySelector('.left')
-const trainEl = document.querySelector('.train')
-let state=true;
+const locoEl = document.querySelector('.loco');
+const leftBtnEl = document.querySelector('.left');
+const rightBtnEl = document.querySelector('.right');
+const START = 0;
+const LEFT = 0;
+const RIGHT = 1000;
+const TIME = 2;
 
 
 btnLightEl.addEventListener('click', () => {
     lightEl.classList.toggle('light_on')
 })
 
-btnRightEl.addEventListener('click' , () => {
-    trainEl.style.left = getComputedStyle(trainEl).left
-    console.log(trainEl.style.left)
-    trainEl.classList.remove('train_left')
-    trainEl.classList.add('train_right')
-    trainEl.style.animationPlayState=state?'paused':'running';
-    state=!state;
-})
+const toggleAnimPlayState = () => {
+    if (locoEl.style.animationPlayState === 'paused' || locoEl.style.animationPlayState === '') {
+        locoEl.style.animationPlayState = 'running'
+    } else {
+        locoEl.style.animationPlayState = 'paused'
+    }
+}
 
-btnLeftEl.addEventListener('click' , () => {
-    trainEl.style.left = getComputedStyle(trainEl).left
-    console.log(trainEl.style.left)
-    trainEl.classList.remove('train_right')
-    trainEl.classList.add('train_left')
-    trainEl.style.animationPlayState=state?'paused':'running';
-    state=!state;
-})
+const moveLeft = () => {
+    move('left')
+}
 
+const moveRight = () => {
+    move('right')
+}
 
-document.addEventListener('keydown', (event) => {
-    switch (event.code) {
+const move = (direction) => {
+    let classNameReplace = getClassNameReplace(direction)
+    if (locoEl.classList.contains(classNameReplace)) {
+        let currentLeft = getComputedStyle(locoEl).left
+        locoEl.style.left = currentLeft
+        currentLeft = Number(currentLeft.slice(0, -2))
+        let newAnimationTime = null
+        if (currentLeft === LEFT) newAnimationTime = TIME * 3
+        else newAnimationTime = getDividend(direction, currentLeft) * TIME / START
+        locoEl.style.animationDuration = newAnimationTime
+        toggleDirection()
+    }
+    toggleAnimPlayState()
+}
+
+const getDividend = (direction, currentLeft) => {
+    let dividend = null
+    if (direction === 'left') dividend = currentLeft
+    else if (direction === 'right') dividend = RIGHT - currentLeft
+    return dividend
+}
+
+const getClassNameReplace = (direction) => {
+    let classNameReplace = ''
+    if (direction === 'left') classNameReplace = 'moveRight'
+    else if (direction === 'right') classNameReplace = 'moveLeft'
+    return classNameReplace
+}
+
+const toggleDirection = () => {
+    locoEl.classList.toggle('moveLeft')
+    locoEl.classList.toggle('moveRight')
+}
+
+document.addEventListener('keydown', (e) => {
+    switch (e.code) {
+        case 'ArrowLeft':
+            moveLeft()
+            break
+        case 'ArrowRight':
+            moveRight()
+            break
         case 'KeyF' : 
             lightEl.classList.toggle('light_on')
-        break
-        case 'ArrowRight' :
-            trainEl.style.left = getComputedStyle(trainEl).left
-            trainEl.classList.remove('train_left')
-            trainEl.classList.add('train_right')
-            trainEl.style.animationPlayState=state?'paused':'running';
-            state=!state;
-        break
-        case 'ArrowLeft' :
-            trainEl.style.left = getComputedStyle(trainEl).left
-            trainEl.classList.remove('train_right')
-            trainEl.classList.add('train_left')
-            trainEl.style.animationPlayState=state?'paused':'running';
-            state=!state;
-        break
+            break
     }
-    })
+})
+
+leftBtnEl.addEventListener('click', moveLeft)
+rightBtnEl.addEventListener('click', moveRight)
