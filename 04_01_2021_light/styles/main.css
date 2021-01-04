@@ -1,0 +1,86 @@
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  
+}
+
+.traffic_lights {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 40px;
+}
+
+.red, .orang, .green {
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  height: 100px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.btn_red {
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.btn_orang {
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.btn_green {
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  background-color: green;
+  border-radius: 10px;
+}
+
+.red_on{
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: auto;
+  background-color: red;
+}
+
+.orang_on{
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: auto;
+  background-color: orange;
+}
+
+.green_on{
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: auto;
+  background-color: green;
+}
