@@ -10,7 +10,7 @@ const offLights = () => {
   lightsRedEl.classList.remove('red_on');
   lightsOrangEl.classList.remove('orang_on');
   lightsGreenEl.classList.remove('green_on');
-};
+}
 
 btnRedEl.addEventListener('click', () => {
   offLights()

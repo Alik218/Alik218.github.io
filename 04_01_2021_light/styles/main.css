@@ -58,7 +58,7 @@
   border-radius: 10px;
 }
 
-.red_on{
+.red_on {
   width: 70px;
   height: 70px;
   border: 2px solid black;
@@ -67,7 +67,7 @@
   background-color: red;
 }
 
-.orang_on{
+.orang_on {
   width: 70px;
   height: 70px;
   border: 2px solid black;
@@ -76,7 +76,7 @@
   background-color: orange;
 }
 
-.green_on{
+.green_on {
   width: 70px;
   height: 70px;
   border: 2px solid black;
