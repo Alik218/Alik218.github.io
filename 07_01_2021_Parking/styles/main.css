@@ -1,9 +1,31 @@
 .main {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px;
 }
 div {
-  width: fit-content;
   padding: 10px;
   border: 2px solid gray;
+  user-select: none;
+}
+.OneCar {
+  margin: 5px;
+  width: 120px;
+}
+
+.bar {
+  text-align: center;
+}
+
+.time {
+  text-align: center;
+}
+
+.busy {
+  background-color: rgba(255, 0, 0, 30%);
+}
+
+.visible {
+  display: block;
 }
