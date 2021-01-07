@@ -10,13 +10,9 @@ const parking = []
 
 const generateParking = (parkingArr) => {
   for (let i = 0; i < PLACES; i++) {
-    tempObj = {}
-    tempObj.id = i+1
-    tempObj.occupied = false
-    tempObj.time = null
-    parkingArr.push(tempObj)
-  }
-  return parkingArr
+    let parkingSlot = { id: i, occupied: 'free', time: 0 };
+    parkingArr.push(parkingSlot);
+};
 }
 
 generateParking(parking)
@@ -28,23 +24,26 @@ console.log (parking)
 const placeBusy = (parkingArr) => {
   count = 0 
   parkingArr.forEach(i => {
-    if(i.occupied) count++
+    if(i.occupied == 'busy') count++
   })
   return count
 }
 
-
-placeBusy(parking)
 
 const placeFree = (parkingArr) => {
   count = 0
   parkingArr.forEach(i => {
-    if(!i.occupied) count++
+    if(i.occupied == 'free') count++
   })
   return count
 }
 
-barEl.innerHTML = `FREE: ${placeFree(parking)} , BUSY: ${placeBusy(parking)}`
+
+const parkingPlase = () => {
+  setInterval(() => {
+    barEl.innerHTML = `FREE: ${placeFree(parking)} , BUSY: ${placeBusy(parking)}`
+  }, 1000)
+}
 
 // 3) Отобразить на странице паркоместа с указанием id, свободно/занято, время занятого. 
 
@@ -74,16 +73,3 @@ displayCurrentTime()
 
 
 
-
-
-// 5) При нажатии на паркоместо, если оно пустое, появляется модальное окно с полем input, в нем текущее время, которое можно исправить, это время занимания парковки. При нажатии "ОК" парковка занимается. 
-// 6) Если нажать на занятой парковке, то появляется модальное окно "освободить парковку? Да/Нет. Время занимания паркоместа: столько-то".
-// 7) При нажатии на пустой парковке, если количество свободных паркомест меньше 20% от всех и при этом время занимания больше 9:00 и меньше 18:00, то в модальном окне порекомендовать не занимать паркоместо.
-
-
-
-
-
-
-
-displayAllParkingStatus(parking)
