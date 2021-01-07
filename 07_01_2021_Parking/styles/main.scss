@@ -1,19 +1,33 @@
-// .main {
-//     display: flex;
-//     flex-wrap: wrap;
-// }
-
-// .elem {
-//     height: 50px;
-//     width: 50px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     margin: 2px;
-//     border: 2px solid blue;
-//     border-radius: 2px;
-// }
-
-// .hover {
-//     background: blue;
-// }
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+    
+  }
+  div {
+    padding: 10px;
+    border: 2px solid gray;
+    user-select: none;
+  }
+  .parking-slot {
+    border-radius: 5px;
+    margin: 5px;
+    width: 120px;
+  }
+  
+  .bar {
+    text-align: center;
+  }
+  
+  .time {
+    text-align: center;
+  }
+  
+  .busy {
+    background-color: rgba(255, 0, 0, 30%);
+  }
+  
+  .free {
+    background-color: rgba(0, 255, 0, 20%);
+  }
