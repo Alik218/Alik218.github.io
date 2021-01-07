@@ -1,3 +1,5 @@
+// урок 07_01_2021
+
 // дз 07_01_2021
 const barEl = document.querySelector('.bar')
 const mainEl = document.querySelector('.main')
@@ -106,8 +108,8 @@ const refreshStatus = () => {
 
 const parsTimeInput = () => {
   let m = moment()
-  let inputHours = parking[index].time.slice(0, 2)
-  let inputMinutes = parking[index].time.slice(-1)
+  let inputHours = parking[index].time.slice(0,2)
+  let inputMinutes = parking[index].time.slice(-2)
   inputHours < moment().hour() ? m.add(1, 'd') : true;
   let input = m.hours(inputHours).minutes(inputMinutes)
   return input
@@ -119,10 +121,22 @@ const calcTimeLast = () => {
   return timeLast
 }
 
+const checkAllert = () => { 
+  let inputHours = inputTime.value.slice(0, 2)
+  if ((placeFree(parking) < parking.length * 0.2) && (inputHours > 9) && (inputHours < 18)) {
+      if (!confirm('Желательно не занимать парковку! Продолжить действие?')) {
+          parking[index].occupied = 'free'
+          parking[index].time = 0
+          parkingAll[index].classList.remove('ocupied')
+      }
+  }
+}
+
 btnInput.addEventListener('click', () => {
   parking[index].occupied = 'busy'
   parking[index].time = inputTime.value
   parkingAll[index].classList.add('ocupied')
+  checkAllert()
   refreshStatus()
   displayCurrentTime()
   inputFree.classList.remove('visible')
