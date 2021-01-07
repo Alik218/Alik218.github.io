@@ -40,10 +40,13 @@ div {
   background-color: orange;
   width: 300px;
   height: 120px;
-  margin: -450px auto;
+  top: 20%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
   display:none;
   text-align: center;
-  position: relative;
+  position: fixed;
 }
 .input {
   border: 3px solid black;
@@ -85,8 +88,11 @@ div {
   height: 250px;
   justify-content: space-between;
   display: none;
-  margin: -450px auto;
-  position: relative;
+  top: 20%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
 }
 .parking-time {
   border-radius: 10px;
