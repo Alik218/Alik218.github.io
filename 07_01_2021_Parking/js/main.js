@@ -115,7 +115,7 @@ const parsTimeInput = () => {
 
 const calcTimeLast = () => { 
   let timeDiff = parsTimeInput() - moment() 
-  let timeLast = `${moment.utc(timeDiff).format('hh:mm')}`
+  let timeLast = `${moment.utc(timeDiff).format('HH:mm')}`
   return timeLast
 }
 
