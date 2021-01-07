@@ -156,3 +156,10 @@ btnCancel.addEventListener('click', () => {
 })
 
 parkingPlase()
+
+
+
+
+
+
+
