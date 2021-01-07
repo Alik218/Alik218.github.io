@@ -1,5 +1,3 @@
-// урок 07_01_2021
-
 // дз 07_01_2021
 const barEl = document.querySelector('.bar')
 const mainEl = document.querySelector('.main')
@@ -18,7 +16,7 @@ const parking = []
 
 const generateParking = (parkingArr) => {
   for (let i = 0; i < PLACES; i++) {
-    let parkingSlot = { id: i, occupied: 'free', time: 0 };
+    let parkingSlot = { id: i + 1, occupied: 'free', time: 0 };
     parkingArr.push(parkingSlot);
 };
 }
@@ -88,7 +86,7 @@ const parkingAll = document.querySelectorAll('.parking')
 
 parkingAll.forEach (element => {
   element.addEventListener('click', () => {
-    index = element.id
+    index = element.id -1
     if (checkParkingStatus(parking[index])) {
         inputOcupied.classList.remove('visible')
         inputFree.classList.add('visible')
