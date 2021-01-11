@@ -79,7 +79,7 @@ const makeTableHTML = (arr, onclick) => {
 const infoEl = document.querySelector('.info')
 
 const generateInfoHTML = (field) => {
-  infoEl.innerHTML = `Left: ${cardsInDeck(field)} cards`
+  infoEl.innerHTML = `Remainder: ${cardsInDeck(field)} cards`
 }
 
 // витягнути карту
